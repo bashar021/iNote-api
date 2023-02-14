@@ -22,15 +22,16 @@ app.use(bodyParser.json());
 app.use(express.json())
 
 app.get('/',function(req,res){
-  User.find({email:'alambashar021@gmail.com'},function(err,result){
-    if(err){
-      console.log(err)
-      return res.send('err')
-    }
+  // User.find({email:'alambashar021@gmail.com'},function(err,result){
+  //   if(err){
+  //     console.log(err)
+  //     return res.send('err')
+  //   }
 
-    // res.status(404).send('page not found ')
-    res.json(result)
-  })
+  //   // res.status(404).send('page not found ')
+  //   res.json(result)
+  // })
+  res.send('sucess')
   
 })
 
