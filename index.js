@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(express.json())
 
 app.get('/',function(req,res){
-  User.findOne({email:'alambashar021@gmail.com'},function(err,result){
+  User.find(function(err,result){
     if(err){
       console.log(err)
       return res.send('err')
