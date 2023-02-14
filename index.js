@@ -25,6 +25,7 @@ app.get('/',function(req,res){
     if(err){
       return res.send({message:'error'})
     }
+    
     // res.status(404).send('page not found ')
     res.json(result)
   })
