@@ -21,7 +21,14 @@ app.use(bodyParser.json());
 app.use(express.json())
 
 app.get('/',function(req,res){
-  res.send('succes')
+  User.find({email:'alambashar021@gmail.com'},function(err,result){
+    if(err){
+      return res.send({message:'error'})
+    }
+    // res.status(404).send('page not found ')
+    res.json(result)
+  })
+  
 })
 
 //user signup route
