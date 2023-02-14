@@ -24,7 +24,8 @@ app.use(express.json())
 app.get('/',function(req,res){
   User.find({email:'alambashar021@gmail.com'},function(err,result){
     if(err){
-      return res.send({message:'error'})
+      console.log(err)
+      return res.send('err')
     }
 
     // res.status(404).send('page not found ')
